@@ -6,24 +6,32 @@
 
 
 
-
+// This function is used to validate the first name field
 function noSpaceAlphaValidate( str ) {
+        // Uses a regex testing user entered any letter upper/lower
+        // At least one with no space
         var alphaRegex = /^[a-zA-Z]{1,}$/;
         return alphaRegex.test(str);			
 }
 
+// This function is used to validate the last name field
 function spaceAlphaValidate( str ) {
+        // Uses a regex testing user entered any letter upper/lower
+        // At least one with a space made by adding space after cap Z
         var alphaRegex = /^[a-zA-Z ]{1,}$/;
         return alphaRegex.test(str);			
 }
 
-
+// This function is used to test the email field
 function emailValidate ( str ) {
+        // The regex tests for the series of conditons 
         var alphaRegex = /(^[a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{3}$)/;
         return alphaRegex.test(str);
 }
 
+// This function is used for the comments box
 function strip_HTML(str) {
+        // It searches the comments for any html to remove it
         var findHtml = /<(.|\n)*?>/gi;
         return str.replace(findHtml,"");
 }
