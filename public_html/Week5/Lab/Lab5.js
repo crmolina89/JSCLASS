@@ -98,7 +98,7 @@ function submitform() {
         var commentErr = document.getElementById("err_comments");
         comment.value = strip_HTML(comment.value);
         
-        if (!comment.value.length || !comment.value.length > 150){
+        if (!comment.value.length || comment.value.length > 150){
             
                  comment.className = "bad";
                  commentErr.innerHTML = "<strong>Comment is <em>NOT</em> valid</strong>";
