@@ -55,9 +55,8 @@ var img = new Image();
 ctx.beginPath();
 // Sets the position of where the circle will appear on my canvas
 ctx.arc(100,150, 80,0, 2*Math.PI);
-ctx.lineWidth="5";
-ctx.strokeStyle="blue";
-ctx.stroke();
+ctx.fillStyle="blue";
+ctx.fill();
 
 // This made my rectangle
 // Set to color red
