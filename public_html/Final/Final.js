@@ -6,7 +6,10 @@
 
 var doc1 = false;
 var doc2 = false;
-var scrolled = false;      
+var agreeCheck = false;
+var disagreeCheck = false;
+var scrolled = false;     
+var radio = false;
 var click1 = document.getElementById('agreeLink1');
 var click2 = document.getElementById('agreeLink2');
 var agree = document.getElementById('agree');
@@ -43,15 +46,19 @@ function scrollValid() {
 }
 
 function radioButton(){
-        if (document.getElementById('agree').checked === true && doc1 === true && doc2 === true){
-            agree = true;
-            notAgree = false;
+        if (agree.checked === true && doc1 === true && doc2 === true){
+            agreeCheck = true;
+            disagreeCheck = false;
         }
-        else if (document.getElementById('notagree').checked === true && doc1 === true && doc2 === true){             
-            agree = true;
-            notAgree = false;
+        else if (notAgree.checked === true && doc1 === true && doc2 === true){             
+            agreeCheck = false;
+            disagreeCheck = true;
         }
-        
+        if (radio !== true && doc1 === true && doc2 === true){
+            $("<b>You may now continue!</b>").appendTo('form');
+            radio = true;
         }
+}
+
 
 
