@@ -56,14 +56,14 @@ function scrollValid() {
     // to pass the checks once it does
     if (objDiv.scrollTop === (objDiv.scrollHeight-objDiv.offsetHeight)){
         // Changes the scroll to true
-        scrolled = true;
-        // Then if the first two documents have been clicked
-        if(doc1 === true && doc2 === true){
+        scrolled = true;       
+    }
+    // If the first two documents have been clicked and scroll equals true
+    if(doc1 === true && doc2 === true && scrolled === true){
             // It will disable the radio buttons for the user to click
             agree.disabled = false;
             notAgree.disabled = false;
         }
-    }
     // Sends to console to see when the user finally made a valid full scroll
     console.log("scroll is " + scrolled);
 }
